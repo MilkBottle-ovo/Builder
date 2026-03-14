@@ -57,8 +57,8 @@ export default [
       'no-unused-vars': 'error',
       'no-undef': 'warn',
       'no-console': 'error',
-      // 'simple-import-sort/imports': 'error',
-      // 'simple-import-sort/exports': 'error',
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
       'vue/valid-define-emits': 'error'
     },
     languageOptions: {
@@ -71,12 +71,12 @@ export default [
         },
         parser: tsParser,
         sourceType: 'module'
-        // project: [
-        //   path.join(import.meta.dirname, 'tsconfig.eslint.json'),
-        //   path.join(import.meta.dirname, '../**/*/tsconfig.json')
-        // ],
-        // // project: path.join(import.meta.dirname, 'tsconfig.eslint.json'),
-        // tsconfigRootDir: import.meta.dirname
+         project: [
+           path.join(import.meta.dirname, 'tsconfig.eslint.json'),
+           path.join(import.meta.dirname, '../**/*/tsconfig.json')
+         ],
+         // project: path.join(import.meta.dirname, 'tsconfig.eslint.json'),
+         tsconfigRootDir: import.meta.dirname
       }
     },
     plugins: { vue: pluginVue , 'simple-import-sort': importSort  }
